@@ -4,7 +4,13 @@ import logo from '../../assets/images/logo.png'
 import { AuthContext } from '../../context/AuthProvider';
 
 const Header = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () =>{
+        logOut()
+        .then(() =>{})
+        .catch(error => console.log(error))
+    }
 
     return (
         <div className="navbar bg-base-100">
@@ -52,7 +58,7 @@ const Header = () => {
             <div className="navbar-end">
                 {
                     user?.uid ?
-                        <Link className="btn mr-3">Log Out</Link>
+                        <Link onClick={handleLogOut} className="btn mr-3">Log Out</Link>
                         :
                         <Link to='/login' className="btn mr-3">Login</Link>
                 }
