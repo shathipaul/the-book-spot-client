@@ -57,16 +57,14 @@ const Header = () => {
             </div>
             <div className="navbar-end">
                 {
+                    user?.uid && <p></p>
+                }
+                {
                     user?.uid ?
                         <Link onClick={handleLogOut} className="btn mr-3">Log Out</Link>
                         :
                         <Link to='/login' className="btn mr-3">Login</Link>
                 }
-                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                    <div className="w-10 rounded-full">
-                        <img src="https://placeimg.com/80/80/people" alt="" />
-                    </div>
-                </label>
             </div>
         </div>
     );

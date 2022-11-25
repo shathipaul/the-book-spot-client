@@ -3,8 +3,8 @@ import img from '../../assets/images/error.jpg'
 
 const ErrorPage = () => {
     return (
-        <div className='w-full'>
-            <img src={img} alt="" />
+        <div className='flex justify-center items-center h-screen'>
+            <img className='w-1/2' src={img} alt="" />
         </div>
     );
 };
