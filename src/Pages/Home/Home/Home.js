@@ -10,12 +10,12 @@ const Home = () => {
             <Feature></Feature> */}
            
            <div>
-            <h2 className='text-5xl mt-5'>Categories</h2>
+            <h2 className='text-5xl mt-5'>Product Categories</h2>
 
            {
-            categories.map(category => <div key={category._id} className="avatar placeholder m-10">
+            categories?.map(category => <div key={category._id} className="avatar placeholder m-10">
             <div className="bg-neutral-focus text-neutral-content rounded-full w-60">
-              <Link to={`/categories/${category._id}`} className="text-3xl">{category.categoryName}</Link>
+              <Link to={`/categories/${category.categoryId}`} className="text-3xl">{category.categoryName}</Link>
             </div>
           </div> )
            }

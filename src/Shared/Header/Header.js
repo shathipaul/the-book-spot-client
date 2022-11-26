@@ -7,14 +7,11 @@ const Header = () => {
     const [categories, setCategories] = useState()
     const { user, logOut } = useContext(AuthContext);
 
-    console.log(categories);
-
     const handleLogOut = () => {
         logOut()
             .then(() => { })
             .catch(error => console.log(error))
     }
-
     useEffect(() => {
         fetch('http://localhost:5000/categories')
             .then(res => res.json())
@@ -36,12 +33,9 @@ const Header = () => {
                                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                             </Link>
                             <ul className="p-2">
-                                {/* {
-                                    categories.map(category => <li><Link>{category.categoryName}</Link></li>)
-                                } */}
-                                {/* <li><Link>Best Seller Books</Link></li>
-                                <li><Link>Fictions</Link></li>
-                                <li><Link>Non-Fictions</Link></li> */}
+                                {
+                                    categories?.map(category => <li key={category._id}><Link to={`/categories/${category.categoryId}`}>{category.categoryName}</Link></li>)
+                                }
                             </ul>
                         </li>
                         <li><Link to='/blog'>Blog</Link></li>
@@ -59,12 +53,9 @@ const Header = () => {
                             <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                         </Link>
                         <ul className="p-2">
-                            {/* {
-                                categories.map(category => <li><Link>{category.categoryName}</Link></li>)
-                            } */}
-                            {/* <li><Link>Best Seller Books</Link></li>
-                            <li><Link>Fictions</Link></li>
-                            <li><Link>Non-Fictions</Link></li> */}
+                            {
+                                categories?.map(category => <li key={category._id}><Link to={`/categories/${category.categoryId}`}>{category.categoryName}</Link></li>)
+                            }
                         </ul>
                     </li>
                     <li><Link to='/blog'>Blog</Link></li>
