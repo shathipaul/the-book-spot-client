@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../context/AuthProvider';
 
-const Category = ({ category }) => {
+const Category = ({ category, setBooking }) => {
     const { name, details, image, location, durationOfUse, buyingPrice, reSellingPrice } = category;
     const {user } = useContext(AuthContext);
     return (
@@ -27,7 +27,7 @@ const Category = ({ category }) => {
                     </h3>
                 </div>
                 <div className="card-actions">
-                <label htmlFor="booking-modal" className="btn btn-primary">Book Now</label>
+                <label onClick={() => setBooking(category)} htmlFor="booking-modal" className="btn btn-primary">Book Now</label>
                 </div>
             </div>
         </div>

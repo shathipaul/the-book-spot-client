@@ -3,11 +3,11 @@ import React from 'react';
 const Blog = () => {
     return (
         <>
-        <div className="carousel w-full ">
+        <div className="carousel w-9/12 mx-auto ">
             <div id="item1" className="carousel-item w-full">
                 <div>
-                    <div className='text-5xl font-bold'>
-                        <h2>What is cors?</h2>
+                    <div className='text-5xl font-bold text-center'>
+                        <h2>What are the different ways to manage a state in a React application?</h2>
                     </div>
                     <div className='mx-16 mt-8'>
                         <p>
@@ -19,8 +19,8 @@ const Blog = () => {
             </div>
             <div id="item2" className="carousel-item w-full">
                 <div>
-                    <div className='text-4xl font-bold'>
-                        <h2>Why are you using firebase? What other options do you have to implement authentication?</h2>
+                    <div className='text-5xl font-bold text-center'>
+                        <h2>How does prototypical inheritance work?</h2>
                     </div>
                     <div className='mx-16 mt-8'>
                         <p>
@@ -31,8 +31,8 @@ const Blog = () => {
             </div>
             <div id="item3" className="carousel-item w-full">
                 <div>
-                    <div className='text-5xl font-bold'>
-                        <h2>How does the private route work?</h2>
+                    <div className='text-5xl font-bold text-center'>
+                        <h2>What is a unit test? Why should we write unit tests?</h2>
                     </div>
                     <div className='mx-16 mt-8'>
                         <p>
@@ -43,8 +43,8 @@ const Blog = () => {
             </div>
             <div id="item4" className="carousel-item w-full">
                 <div>
-                    <div className='text-5xl font-bold'>
-                        <h2>What is Node? How does Node work?</h2>
+                    <div className='text-5xl font-bold text-center'>
+                        <h2>React vs. Angular vs. Vue?</h2>
                     </div>
                     <div className='mx-16 mt-8'>
                         <p>

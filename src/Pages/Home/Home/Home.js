@@ -2,15 +2,16 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Banner from '../Banner/Banner';
 import Feature from '../Feature/Feature';
+import OurSpecialties from '../OurSpecialties/OurSpecialties';
 const Home = () => {
     const categories = useLoaderData();
     return (
         <div>
-            {/* <Banner></Banner>
-            <Feature></Feature> */}
+            <Banner></Banner>
+            {/* <Feature></Feature> */}
            
-           <div>
-            <h2 className='text-5xl mt-5'>Product Categories</h2>
+           <div className='flex flex-col lg:flex-row justify-center items-center'>
+            <h2 className='text-5xl text-center'>Product Categories</h2>
 
            {
             categories?.map(category => <div key={category._id} className="avatar placeholder m-10">
@@ -20,7 +21,7 @@ const Home = () => {
           </div> )
            }
            </div>
-           
+           <OurSpecialties></OurSpecialties>
           
         </div>
     );
