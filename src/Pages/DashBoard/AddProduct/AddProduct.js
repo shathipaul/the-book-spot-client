@@ -6,8 +6,6 @@ import { AuthContext } from '../../../context/AuthProvider';
 const AddProduct = () => {
   const { user } = useContext(AuthContext);
 
-  const today = new Date().toLocaleDateString();
-
   const {handleSubmit, register} = useForm();
 
   const handleAddProduct = (e) => {
@@ -35,7 +33,6 @@ const AddProduct = () => {
             usedDuration: e.duration,
             location: e.location,
             img: imgData.data.display_url,
-            postedDate: today,
             userName: user.displayName,
             userEmail: user.email,
             userImg: user.photoURL,
