@@ -38,7 +38,6 @@ const AddProduct = () => {
             userImg: user.photoURL,
           };
 
-          // save product information to the database
           fetch("https://b612-used-products-resale-server-side-shathipaul.vercel.app/addproduct", {
             method: "POST",
             headers: {
@@ -51,7 +50,7 @@ const AddProduct = () => {
             .then((result) => {
               console.log(result);
               if (result.acknowledged) {
-                // toast.success(`${v.name} is added successfully`);
+                
                 toast(`${e.name} is added successfully`);
               }
             });
@@ -185,7 +184,7 @@ const AddProduct = () => {
                 className="block w-full xt-select rounded-md py-2.5 px-3.5 text-gray-900 placeholder-black placeholder-opacity-75 bg-gray-100 transition focus:bg-gray-200 focus:outline-none"
                 aria-label="Select"
                 {...register("location", {
-                  required: "Book Location is required",
+                  required: " Location is required",
                 })}
               >
                 <option defaultValue="">Select your district</option>
