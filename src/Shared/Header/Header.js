@@ -10,7 +10,7 @@ const Header = () => {
     const { data: categories = [] } = useQuery({
         queryKey: ['categories'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/categories')
+            const res = await fetch('https://b612-used-products-resale-server-side-shathipaul.vercel.app/categories')
             const data = await res.json();
             return data;
         }
@@ -65,9 +65,9 @@ const Header = () => {
                     </li>
                     <li><Link to='/blog'>Blog</Link></li>
                     {
-                    user?.uid && <li><Link to='/dashboard'>Dashboard</Link></li>
-                }
-                    
+                        user?.uid && <li><Link to='/dashboard'>Dashboard</Link></li>
+                    }
+
                 </ul>
             </div>
             <div className="navbar-end">
@@ -79,8 +79,8 @@ const Header = () => {
                 }
             </div>
             <label tabIndex={0} htmlFor="drawer" className="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                    </label>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </label>
         </div>
     );
 };

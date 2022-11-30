@@ -20,12 +20,12 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/categories')
+                loader: () => fetch('https://b612-used-products-resale-server-side-shathipaul.vercel.app/categories')
             },
             {
                 path: '/categories/:id',
                 element: <PrivateRoute><Categories></Categories></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/categories/${params.id}`)
+                loader: ({ params }) => fetch(`https://b612-used-products-resale-server-side-shathipaul.vercel.app/categories/${params.id}`)
             },
             {
                 path: 'blog',
