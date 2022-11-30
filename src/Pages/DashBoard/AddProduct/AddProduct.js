@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider';
 
 const AddProduct = () => {
-    const { user } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
   const today = new Date().toLocaleDateString();
 
@@ -15,9 +14,6 @@ const AddProduct = () => {
     formState: { errors },
   } = useForm();
 
-  const navigate = useNavigate();
-
-  // add product submit handle
   const handleAddProduct = (e) => {
 
     const image = e.picture[0];
@@ -72,8 +68,8 @@ const AddProduct = () => {
         console.error("Book image upload Error:", error);
       });
   };
-    return (
-        <>
+  return (
+    <>
       <div className="lg:w-[70%] ">
         <form onSubmit={handleSubmit(handleAddProduct)} className="text-sm">
           <div className="xt-row xt-row-x-6 xt-row-y-4">
@@ -140,11 +136,11 @@ const AddProduct = () => {
               />
             </div>
 
-           
+
 
             <div className="w-full my-3">
               <label className="block mb-3 font-medium text-gray-700">
-                 Description
+                Description
               </label>
               <textarea
                 placeholder="Write about your book"
@@ -154,7 +150,7 @@ const AddProduct = () => {
                   required: "Book description is required",
                 })}
               ></textarea>
-              
+
             </div>
 
             <div className="w-full my-3">
@@ -218,7 +214,7 @@ const AddProduct = () => {
         </form>
       </div>
     </>
-    );
+  );
 };
 
 export default AddProduct;

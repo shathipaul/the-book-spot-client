@@ -64,13 +64,13 @@ const Header = () => {
                         </ul>
                     </li>
                     <li><Link to='/blog'>Blog</Link></li>
-                    <li><Link to='/dashboard'>Dashboard</Link></li>
+                    {
+                    user?.uid && <li><Link to='/dashboard'>Dashboard</Link></li>
+                }
+                    
                 </ul>
             </div>
             <div className="navbar-end">
-                {
-                    user?.uid && <p></p>
-                }
                 {
                     user?.uid ?
                         <Link onClick={handleLogOut} className="btn mr-3">Log Out</Link>
