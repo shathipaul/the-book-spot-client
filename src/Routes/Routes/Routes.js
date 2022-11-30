@@ -50,7 +50,7 @@ const router = createBrowserRouter([
                 element: <MyOrders></MyOrders>
             },
             {
-                path: 'ddproduc/at',
+                path: '/dashboard/addproduct',
                 element: <AddProduct></AddProduct>
             }
         ]
