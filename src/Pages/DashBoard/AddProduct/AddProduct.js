@@ -8,11 +8,7 @@ const AddProduct = () => {
 
   const today = new Date().toLocaleDateString();
 
-  const {
-    handleSubmit,
-    register,
-    formState: { errors },
-  } = useForm();
+  const {handleSubmit, register} = useForm();
 
   const handleAddProduct = (e) => {
 
